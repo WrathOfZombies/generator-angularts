@@ -1,0 +1,25 @@
+{
+  "lib": {
+    "js": "./public/lib/js",
+    "css": "./public/lib/css",
+    "fonts": "./public/lib/fonts"
+  }, 
+  "sass": {
+    "input": "./src/scss/**/*.scss",
+    "output": "./public/css"
+  },
+  "ts": {
+    "references": "./_references.d.ts",
+    "input": "./src/ts/**/*.ts",
+    "output": "./public/js"
+  },
+  "html": {
+    "input": "./public/**/*.html"
+  },
+  "server": {
+    "root": "./public",
+    "host": "localhost",
+    "port": 8080,
+    "fallback": "./public/index.html"
+  }
+}

@@ -1,0 +1,20 @@
+{
+	"version": "0.2.0",
+	"configurations": [		
+		{
+			"name": "Launch localhost with chrome",
+			"type": "chrome",
+			"request": "launch",
+			"url": "http://localhost:8080/index.html",
+			"sourceMaps": true,
+			"webRoot": "public",
+			"preLaunchTask": "build"
+		},
+		{
+			"name": "Attach",
+			"type": "chrome",
+			"request": "attach",
+			"port": 9222
+		}
+	]
+}
