@@ -1,6 +1,6 @@
 {
   "name": "generator-angularts",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "An AngularJS template built using TypeScript and SASS. Uses gulp task runner to compile .ts and .scss files. Also supports live-reload and chrome debugging (when using visual studio code as an ide)",
   "homepage": "https://github.com/WrathOfZombies/generator-angularts",
   "author": {
@@ -9,7 +9,7 @@
     "url": "https://github.com/WrathOfZombies"
   },
   "files": [
-    "generators/angularts"
+    "generators/templates"
   ],
   "main": "index.js",
   "keywords": [
