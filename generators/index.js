@@ -9,21 +9,21 @@ module.exports = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the impeccable ' + chalk.red('generator-angularts') + ' generator!'
-    ));
+      'Welcome to the ' + chalk.bgWhite.gray('Angular with TypeScript, SASS and all the good stuff') + ' generator!\n' + chalk.bold('Please make sure that you run this command inside a project folder.'
+        )));
 
     var prompts = [{
       type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
+      name: 'continue',
+      message: 'Shall i begin the installation?',
       default: true
     }];
 
     this.prompt(prompts, function (props) {
       this.props = props;
-      // To access props later use this.props.someOption;
-
-      done();
+      if (this.props.continue) {
+        done();
+      }
     }.bind(this));
   },
 
@@ -31,7 +31,7 @@ module.exports = yeoman.generators.Base.extend({
     this.fs.copy(
       this.sourceRoot(),
       this.destinationRoot()
-    );
+      );
   },
 
   install: function () {
