@@ -13,7 +13,10 @@
   ],
   "main": "index.js",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "angular",
+    "typescript",
+    "angularjs"    
   ],
   "dependencies": {
     "yeoman-generator": "^0.21.1",
