@@ -1,4 +1,4 @@
-# generator-angularts [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-angularts [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > An AngularJS template built using TypeScript and SASS. Uses gulp task runner to compile .ts and .scss files. Also supports live-reload and chrome debugging (when using visual studio code as an ide)
 
 ## Installation
