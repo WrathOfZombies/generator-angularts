@@ -6,7 +6,7 @@ var helpers = require('yeoman-generator').test;
 describe('generator-angularts:app', function () {
   before(function (done) {
     helpers.run(path.join(__dirname, '../generators/templates'))
-      .withOptions({ 'continue': true })
+      .withOptions({ continue: true })
       .withPrompts({ someAnswer: true })
       .on('end', done);
   });

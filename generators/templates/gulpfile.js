@@ -1,11 +1,11 @@
+'use strict';
+
 var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     bower = require('gulp-bower'),
-    main_bower_files = require('main-bower-files'),
-    filter = require('gulp-filter'),
+    mainBowerFiles = require('main-bower-files'),
     del = require('del'),
 
-    concat = require('gulp-concat'),
     sass = require('gulp-sass'),
 
     inject = require('gulp-inject'),
@@ -14,12 +14,11 @@ var gulp = require('gulp'),
     merge = require('merge2'),
 
     connect = require('gulp-connect'),
-    config = require('./gulpfile.config.json');
-
-var errorHandler = function (error) {
-    console.log(error);
-    this.emit('end');
-}
+    config = require('./gulpfile.config.json'),
+    errorHandler = function (error) {
+        console.log(error);
+        this.emit('end');
+    };
 
 gulp.task('clean:bower', function (done) {
     return del(['./bower_components', './lib'], done);
@@ -38,13 +37,13 @@ gulp.task('bower:download', ['clean:bower'], function () {
 });
 
 gulp.task('bower:install', ['bower:download'], function () {
-    var filterCss = gulp.src(main_bower_files({ filter: /.*\.css$/i }))
+    var filterCss = gulp.src(mainBowerFiles({ filter: /.*\.css$/i }))
         .pipe(gulp.dest(config.lib.css)),
 
-        filterJs = gulp.src(main_bower_files({ filter: /.*\.js$/i }))
+        filterJs = gulp.src(mainBowerFiles({ filter: /.*\.js$/i }))
             .pipe(gulp.dest(config.lib.js)),
 
-        filterFonts = gulp.src(main_bower_files({ filter: /.*\.ttf$/i }))
+        filterFonts = gulp.src(mainBowerFiles({ filter: /.*\.ttf$/i }))
             .pipe(gulp.dest(config.lib.fonts));
 
     return merge([filterCss, filterJs, filterFonts]);
@@ -68,7 +67,7 @@ gulp.task('generate-references', function () {
         transform: function (filepath) {
             return '/// <reference path="' + filepath + '" />';
         }
-    })).pipe(gulp.dest("./"));
+    })).pipe(gulp.dest('./'));
 });
 
 gulp.task('compile:ts', ['generate-references', 'clean:ts'], function () {
@@ -86,7 +85,7 @@ gulp.task('serve', ['compile:sass', 'compile:ts'], function () {
         host: config.server.host,
         port: config.server.port,
         fallback: config.server.fallback,
-        livereload: true,
+        livereload: true
     });
 });
 
