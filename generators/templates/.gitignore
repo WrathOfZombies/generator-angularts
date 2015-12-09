@@ -49,7 +49,6 @@ Temporary Items
 node_modules/**
 bower_components/**
 typings/**
-src/**
 public/lib/**
 public/css/**
 public/js/**

@@ -8,6 +8,7 @@ First, install [Yeoman](http://yeoman.io) and generator-angularts using [npm](ht
 ```bash
 npm install -g yo
 npm install -g generator-angularts
+npm install -g tsd
 ```
 
 Then generate your new project:
@@ -15,6 +16,22 @@ Then generate your new project:
 ```bash
 yo angularts
 ```
+
+Switch to the project directory
+
+```bash
+npm install
+tsd install
+gulp bower:install
+gulp build
+```
+
+Then navigate to http://localhost:8080 to see your template in action.
+
+## Coming Soon
+
+- Project name prompt for customizability
+- Dependency installation
 
 ## Getting To Know Yeoman
 

@@ -1,0 +1,41 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.jumbo-panel {
+	padding: 50px;		
+	
+	.title-bar {
+		margin-bottom: 45px;
+		text-transform: uppercase;		
+		
+		.back-link {
+			border-right: solid 2px rgba(255,255,255,0.6);
+			padding-right: 6px;
+			margin-right: 6px;			
+		}
+		
+		a {
+			text-decoration: none;
+		}			
+	}
+	
+	p {		 
+		margin: 0;
+		margin-bottom: 6px;
+		padding: 0;
+		
+		&.ms-font-xl {
+			margin-top: 15px;
+		}
+	}
+	
+	.ms-Button {
+		margin-top: 30px;		
+		margin-left: 0;
+		margin-right: 6px;
+	}
+}
