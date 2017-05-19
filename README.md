@@ -1,3 +1,5 @@
+># [DEPRECATED] There are a lot of changes and typescript has a lot of starter kits available today.
+
 # generator-angularts [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > An AngularJS template built using TypeScript and SASS. Uses gulp task runner to compile .ts and .scss files. Also supports live-reload and chrome debugging (when using visual studio code as an ide)
 
